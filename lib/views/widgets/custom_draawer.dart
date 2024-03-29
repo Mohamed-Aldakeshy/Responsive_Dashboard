@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dashboard/model/drawer_item_model.dart';
+import 'package:responsive_dashboard/model/user_info_item_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/views/widgets/active_and_inactive_item.dart';
 import 'package:responsive_dashboard/views/widgets/drawer_items_list_view.dart';
@@ -11,33 +10,34 @@ import 'package:responsive_dashboard/views/widgets/user_info_list_tile.dart';
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
+  static const items = [
+    UserInfoItemModel(
+        image: Assets.imagesAvatar3,
+        title: 'Lekan Okeowo',
+        subTitle: 'demo@gmail.com'),
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
+          const SliverToBoxAdapter(
+              child: SizedBox(
+            height: 60,
+          )),
           SliverToBoxAdapter(
             child: UserInfoListTile(
-              image: Assets.imagesAvatar3,
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com',
+              userInfoItemModel: items[0],
             ),
           ),
-          SliverToBoxAdapter(
-            child: UserInfoListTile(
-              image: Assets.imagesAvatar3,
-              title: 'Dev Walker',
-              subTitle: 'devwalker@gmail.com',
-            ),
-          ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SizedBox(
               height: 8,
             ),
           ),
-          DrawerItemsListView(),
-          SliverFillRemaining(
+          const DrawerItemsListView(),
+          const SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
