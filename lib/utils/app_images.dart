@@ -33,9 +33,9 @@ class Assets {
   /// assets/images/convert-card.svg
   static const String imagesConvertCard = "assets/images/convert-card.svg";
 
-  /// Assets for imagesCreditCard
-  /// assets/images/Credit_Card.svg
-  static const String imagesCreditCard = "assets/images/Credit_Card.svg";
+  /// Assets for imagesGallery
+  /// assets/images/gallery.svg
+  static const String imagesGallery = "assets/images/gallery.svg";
 
   /// Assets for imagesGraph
   /// assets/images/graph.svg
@@ -48,6 +48,10 @@ class Assets {
   /// Assets for imagesMoneys
   /// assets/images/moneys.svg
   static const String imagesMoneys = "assets/images/moneys.svg";
+
+  /// Assets for imagesMycard
+  /// assets/images/mycard.png
+  static const String imagesMycard = "assets/images/mycard.png";
 
   /// Assets for imagesSetting2
   /// assets/images/setting-2.svg

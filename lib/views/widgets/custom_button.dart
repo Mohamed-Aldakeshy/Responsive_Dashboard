@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
         onPressed: () {},
         child: Text(
           'Send Money',
-          style: AppStyles.styleSemibold18White.copyWith(
+          style: AppStyles.styleSemibold18White(context).copyWith(
             color: textColor,
           ),
         ),

@@ -22,9 +22,9 @@ class AllExpensesRangeOptions extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Text(
+          Text(
             'Monthly',
-            style: AppStyles.styleMedium16blue,
+            style: AppStyles.styleMedium16blue(context),
           ),
           const SizedBox(
             width: 18,
